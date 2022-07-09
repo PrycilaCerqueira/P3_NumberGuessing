@@ -4,9 +4,21 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
 {
     internal class Program
     {
+
+
+        static int sortARandomNumber()
+        {
+            Random draw = new Random();
+            int drawedNumber = draw.Next(100);
+            return drawedNumber;
+        }
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           Console.WriteLine(sortARandomNumber());
         }
     }
+
+    
 }
