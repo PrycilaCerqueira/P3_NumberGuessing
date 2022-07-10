@@ -6,7 +6,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
     {
 
 
-        static int sortARandomNumber()
+        static int sortARandomNumber() //TODO: Rename method (Get a Random Number)
         {
             Random draw = new Random();
             int drawedNumber = draw.Next(100);
