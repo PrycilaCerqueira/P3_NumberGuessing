@@ -5,18 +5,20 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
     internal class Program
     {
 
-
-        static int sortARandomNumber()
+        //Function to get a Random number for the main program
+        static int GetARandomNumber()
         {
             Random draw = new Random();
-            int drawedNumber = draw.Next(100);
+            int drawedNumber = draw.Next(1, 101);
             return drawedNumber;
         }
 
 
+        //Main program
         static void Main(string[] args)
         {
-           Console.WriteLine(sortARandomNumber());
+            Console.WriteLine(GetARandomNumber());
+
         }
     }
 
