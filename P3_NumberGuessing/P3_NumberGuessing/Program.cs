@@ -20,14 +20,14 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
             int randomNumber = GetARandomNumber();
             int guessedNumber = 0;
 
-            Console.WriteLine("Let's play! \nYou will have 7 chances to win this game. \nGuess a number between 1 to 100. \n");
+            Console.WriteLine("Let's play! \nYou will have 5 chances to win this game. \nGuess a number between 1 to 100. \n");
 
-            for (int count = 1; count <= 8; count++)
+            for (int count = 1; count <= 6; count++)
             {
 
-                if (count == 8)
+                if (count == 6)
                 {
-                    Console.WriteLine("You lose -.-'");
+                    Console.WriteLine($"You lose -.- \nThe correct number was {randomNumber}.");
                 }
                 else 
                 {
