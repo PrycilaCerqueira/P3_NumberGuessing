@@ -24,28 +24,34 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
 
             for (int count = 1; count <= 6; count++)
             {
-
                 if (count == 6)
                 {
                     Console.WriteLine($"You lose -.- \nThe correct number was {randomNumber}.");
                 }
-                else 
+                else
                 {
                     Console.Write($"Guess number {count}: ");
                     guessedNumber = Int32.Parse(Console.ReadLine());
 
-                    if (guessedNumber < randomNumber)
+                    if (guessedNumber + 5 == randomNumber || guessedNumber - 5 == guessedNumber)
                     {
-                        Console.WriteLine("Your guess was too low.");
+                        Console.WriteLine("You are close! ");
                     }
-                    if (guessedNumber > randomNumber)
+                    else
                     {
-                        Console.WriteLine("Your guess was too high.");
-                    }
-                    if (guessedNumber == randomNumber)
-                    {
-                        Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
-                        break;
+                        if (guessedNumber < randomNumber)
+                        {
+                            Console.WriteLine("Your guess was too low.");
+                        }
+                        if (guessedNumber > randomNumber)
+                        {
+                            Console.WriteLine("Your guess was too high.");
+                        }
+                        if (guessedNumber == randomNumber)
+                        {
+                            Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
+                            break;
+                        }
                     }
                 }
                     
