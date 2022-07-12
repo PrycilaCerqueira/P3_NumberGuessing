@@ -29,7 +29,16 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
 
                 if (guessedNumber == randomNumber)
                 {
-
+                    Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
+                    
+                }
+                if (guessedNumber < randomNumber)
+                {
+                    Console.WriteLine("Your guess was too low.");
+                }
+                if (guessedNumber > randomNumber)
+                {
+                    Console.WriteLine("Your guess was too high.");
                 }
                 
             }
