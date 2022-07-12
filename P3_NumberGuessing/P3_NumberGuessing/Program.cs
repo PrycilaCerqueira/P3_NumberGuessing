@@ -22,21 +22,28 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
 
             Console.WriteLine("Let's play! \nYou will have 5 chances to win this game. \nGuess a number between 1 to 100. \n");
 
+            //For to iterantes through 5 times
             for (int count = 1; count <= 6; count++)
-            {
+            {   
+                //Validates whether or not the player reached their limited tries 
                 if (count == 6)
                 {
                     Console.WriteLine($"You lose -.- \nThe correct number was {randomNumber}.");
                 }
+                
+                //The player continues to play if they haven't surpassed 5 times
                 else
                 {
                     Console.Write($"Guess number {count}: ");
                     guessedNumber = Int32.Parse(Console.ReadLine());
 
+                    //Validates if the guessed number is close to the drawed number 
                     if (guessedNumber + 5 == randomNumber || guessedNumber - 5 == guessedNumber)
                     {
                         Console.WriteLine("You are close! ");
                     }
+                    
+                    //Validates if the number guessed is high, low, or the exactly number drawed
                     else
                     {
                         if (guessedNumber < randomNumber)
