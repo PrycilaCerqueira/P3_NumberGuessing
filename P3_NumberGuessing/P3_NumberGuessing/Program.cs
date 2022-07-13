@@ -37,15 +37,16 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                     Console.Write($"Guess number {count}: ");
                     guessedNumber = Int32.Parse(Console.ReadLine());
 
-                    //Validates if the guessed number is close to the drawed number 
-                    if (guessedNumber + 5 == randomNumber || guessedNumber - 5 == guessedNumber)
-                    {
-                        Console.WriteLine("You are close! ");
-                    }
-                    
-                    //Validates if the number guessed is high, low, or the exactly number drawed
-                    else
-                    {
+                        
+                        if (guessedNumber == randomNumber)
+                        {
+                            Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
+                            break;
+                        }
+                        if (guessedNumber > (randomNumber - 5) && guessedNumber < (randomNumber + 5))
+                        {
+                            Console.WriteLine("You are close! ");
+                        }
                         if (guessedNumber < randomNumber)
                         {
                             Console.WriteLine("Your guess was too low.");
@@ -54,12 +55,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                         {
                             Console.WriteLine("Your guess was too high.");
                         }
-                        if (guessedNumber == randomNumber)
-                        {
-                            Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
-                            break;
-                        }
-                    }
+                       
                 }
                     
 
