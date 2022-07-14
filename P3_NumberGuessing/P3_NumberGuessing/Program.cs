@@ -34,30 +34,29 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                     if (guessedNumber < 1 || guessedNumber > 100)
                     {
                         Console.WriteLine("The number inserted is out of range. Please, try again!");
+                        Console.Write("Guess again: ");
+                        guessedNumber = Int32.Parse(Console.ReadLine());
+                        distance = Math.Abs(drawedNumber - guessedNumber);
                     }
-
-                    else
+                    if (guessedNumber == drawedNumber)
                     {
-
-                        if (guessedNumber == drawedNumber)
-                        {
-                            Console.WriteLine($"Congratulations!!! You guessed the right number {drawedNumber}.");
-                            break;
-                        }
-                        //if (guessedNumber >= (drawedNumber - 5) && guessedNumber <= (drawedNumber + 5))
-                        if (distance <= 5)
-                        {
-                            Console.WriteLine("You are close! ");
-                        }
-                        if (guessedNumber < drawedNumber)
-                        {
-                            Console.WriteLine("Your guess was too low.");
-                        }
-                        if (guessedNumber > drawedNumber)
-                        {
-                            Console.WriteLine("Your guess was too high.");
-                        }
-                    }  
+                        Console.WriteLine($"Congratulations!!! You guessed the right number {drawedNumber}.");
+                        break;
+                    }
+                    //if (guessedNumber >= (drawedNumber - 5) && guessedNumber <= (drawedNumber + 5))
+                    if (distance <= 5)
+                    {
+                        Console.WriteLine("You are close! ");
+                    }
+                    if (guessedNumber < drawedNumber)
+                    {
+                        Console.WriteLine("Your guess was too low.");
+                    }
+                    if (guessedNumber > drawedNumber)
+                    {
+                        Console.WriteLine("Your guess was too high.");
+                    }
+                   
                 }
                
 
