@@ -18,7 +18,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
             for (int count = 1; count <= 6; count++)
             {
                 //Validates whether or not the player reached their limited tries 
-                if (count == 6)
+                if (count >= 6)
                 {
                     Console.WriteLine($"You lose -.- \nThe correct number was {drawedNumber}.");
                 }
