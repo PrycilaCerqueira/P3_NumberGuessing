@@ -19,7 +19,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                 //Validates whether or not the player reached their limited tries 
                 if (count == 6)
                 {
-                    Console.WriteLine($"You lose -.- \nThe correct number was {randomNumber}.");
+                    Console.WriteLine($"You lose -.- \nThe correct number was {drawedNumber}.");
                 }
                 
                 //The player continues to play if they haven't surpassed 5 times
@@ -29,20 +29,20 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                     guessedNumber = Int32.Parse(Console.ReadLine());
 
                         
-                        if (guessedNumber == randomNumber)
+                        if (guessedNumber == drawedNumber)
                         {
-                            Console.WriteLine($"Congratulations!!! You guessed the right number {randomNumber}.");
+                            Console.WriteLine($"Congratulations!!! You guessed the right number {drawedNumber}.");
                             break;
                         }
-                        if (guessedNumber >= (randomNumber - 5) && guessedNumber =< (randomNumber + 5))
+                        if (guessedNumber >= (drawedNumber - 5) && guessedNumber =< (drawedNumber + 5))
                         {
                             Console.WriteLine("You are close! ");
                         }
-                        if (guessedNumber < randomNumber)
+                        if (guessedNumber < drawedNumber)
                         {
                             Console.WriteLine("Your guess was too low.");
                         }
-                        if (guessedNumber > randomNumber)
+                        if (guessedNumber > drawedNumber)
                         {
                             Console.WriteLine("Your guess was too high.");
                         }
