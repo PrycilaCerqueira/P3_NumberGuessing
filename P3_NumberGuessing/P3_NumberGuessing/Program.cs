@@ -34,7 +34,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
                             Console.WriteLine($"Congratulations!!! You guessed the right number {drawedNumber}.");
                             break;
                         }
-                        if (guessedNumber >= (drawedNumber - 5) && guessedNumber =< (drawedNumber + 5))
+                        if (guessedNumber >= (drawedNumber - 5) && guessedNumber <= (drawedNumber + 5))
                         {
                             Console.WriteLine("You are close! ");
                         }
