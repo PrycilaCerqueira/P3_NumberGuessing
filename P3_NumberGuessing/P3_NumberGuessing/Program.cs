@@ -8,7 +8,7 @@ namespace P3_NumberGuessing // Note: actual namespace depends on the project nam
         static void Main(string[] args)
         {
             Random draw = new Random();
-            int drawedNumber = draw.Next(1, 21);
+            int drawedNumber = draw.Next(1, 101);
             int guessedNumber = 0;
             
 
